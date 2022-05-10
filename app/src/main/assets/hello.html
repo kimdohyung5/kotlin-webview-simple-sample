@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getToastMessage() {
+            return document.getElementById('toastMessage').value;
+        }
+
+        function concatenateStrings(arg1, arg2) {
+            console.log("concatenateString" + arg1);
+            return arg1 + arg2;
+        }
+
+        function showToast() {
+            MyJavascriptInterface.showToast(getToastMessage());
+        }
+    </script>
+</head>
+<body>
+
+<div style="max-width:960px; margin: auto; text-align:center;">
+    <div style="margin-top: 50px;">
+        <button id="changeColor" type="button" onclick="this.style.backgroundColor='red'">Change color</button>
+    </div>
+
+    <div style="margin-top: 50px;">
+        <input id="toastMessage" type="text" placeholder="Toast message"/>
+    </div>
+
+    <div style="margin-top: 50px;">
+        <button id="showToast" type="button" onclick="showToast()">Show toast</button>
+    </div>
+</div>
+
+</body>
+</html>
